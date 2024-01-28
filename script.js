@@ -1,30 +1,9 @@
 'use strict';
 
-//DOM MANIPULATION---------------
-//making javascript interact with a webpage is called DOM manipulation
-//DOM = Document Object Model.
-//It allows for the structured representation/manipulation of HTML documents
-/*
-//for selecting a class, you use . for selecting an id, you use #
-//.textContent grabs the text within the class
-console.log(document.querySelector('.message').textContent);
-
-//this changes the content in the class.
-document.querySelector('.message').textContent = '😎 Correct Number!';
-
-document.querySelector('.number').textContent = 13;
-document.querySelector('.score').textContent = 10;
-
-document.querySelector('.guess').value = 23;
-console.log(document.querySelector('.guess').value);
-*/
-
 //math.random is a random number between 0 - 1.
 //multiplying math.random by a number gives you a value between that number and 0
 //trunc takes away the decimals, but cuts off the last number, so add 1.
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
-//document.querySelector('.number').textContent = secretNumber;
-
 let score = 20;
 let highScore = 0;
 
@@ -64,29 +43,6 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = 0;
     }
   }
-
-  //guess is too high
-  // } else if (guess > secretNumber) {
-  //   if (score > 1) {
-  //     document.querySelector('.message').textContent = '📈Too high!';
-  //     score--;
-  //     document.querySelector('.score').textContent = score;
-  //   } else {
-  //     document.querySelector('.message').textContent = 'You Lose.';
-  //     document.querySelector('.score').textContent = 0;
-  //   }
-
-  //   //guess is too low
-  // } else if (guess < secretNumber) {
-  //   if (score > 1) {
-  //     document.querySelector('.message').textContent = '📉Too low!';
-  //     score--;
-  //     document.querySelector('.score').textContent = score;
-  //   } else {
-  //     document.querySelector('.message').textContent = 'You Lose.';
-  //     document.querySelector('.score').textContent = 0;
-  //   }
-  // }
 });
 
 document.querySelector('.again').addEventListener('click', function () {
